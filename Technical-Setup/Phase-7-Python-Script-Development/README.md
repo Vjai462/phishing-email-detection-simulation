@@ -84,3 +84,17 @@ PhishDetector/
 - **Virtual Environment (venv)** = keeps libraries isolated and avoids system conflicts.
 
 
+## Useful Resources
+https://zenodo.org/record/13474746/files/Phishing_validation_emails.csv
+
+
+## Phase Summary
+
+In this phase, we built our **first phishing email detection model**.
+
+We successfully:
+
+- Installed required libraries in a safe virtual environment.
+- Prepared and explored a phishing dataset.
+- Wrote and executed a Python script to classify emails.
+- Achieved 100% accuracy on a small dataset.
