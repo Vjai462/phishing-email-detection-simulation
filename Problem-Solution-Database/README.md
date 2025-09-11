@@ -1,13 +1,5 @@
-Problem	Phase	Difficulty	Solution	Date	Status	Learning
-Windows Server 2022 can’t install .NET Framework 3.5 through Windows Features	Phase 1	Medium	Use Server Manager → Add roles and features OR PowerShell Enable-WindowsOptionalFeature.
-Alternative: Manual .NET download + install.	Sept 6, 2025	✅ Done	Legacy apps need old frameworks. hMailServer relies on legacy .NET.
-Forgotten Admin Account Password (lost admin@sber.local
-)	Phase 1	Easy	Reset password in hMailServer Administrator under Domains → Accounts. Enter new password.	Sept 7, 2025	✅ Done	Lab admins can reset passwords directly; always document test creds.
-
-
 # 🐞 Problems & Solutions
 
 | Problem | Phase | Difficulty | Solution | Date | Status | Learning |
 |---------|-------|------------|----------|------|--------|----------|
-| Windows Server 2022 can’t install .NET Framework 3.5 through Windows Features | Phase 1 | Medium | Use **Server Manager** → Add roles and features OR PowerShell `Enable-WindowsOptionalFeature`. <br> Alternative: Manual .NET download + install. | Sept 6, 2025 | ✅ Done | Legacy apps need old frameworks. hMailServer relies on legacy .NET. |
-| Forgotten Admin Account Password (lost admin@sber.local) | Phase 1 | Easy | Reset password in hMailServer Administrator under **Domains → Accounts**. Enter new password. | Sept 7, 2025 | ✅ Done | Lab admins can reset passwords directly; always document test creds. |
+| Windows Server 2022 can't install .NET Framework 3.5 through Windows Features | Phase 1 | Medium | Use Server Manager **"Add roles and features"** or PowerShell `Enable-WindowsOptionalFeature`. <br><br> **Alternative Solution (If Download Keeps Failing):** <br> Manual .NET Framework Download: <br> 📸 *Screenshot timing: before alternative* <br> - Screenshot of current error state <br> **Actions:** <br> 1. Open a new browser tab <br> 2. Go to: [Microsoft .NET Framework 2.0 Service Pack 2](https://www.microsoft.com/en-us/download/details.aspx?id=1639) <br> 3. Download and install manually <br> 4. Return to hMailServer installation | Sept 6, 2025 | ✅ Done | Legacy applications often need older frameworks installed as optional features. <br><br> **Why This Happened (Windows Server 2022):** <br> • Modern Windows Server comes with .NET Framework 4.x pre-installed <br> • Legacy .NET 2.0/3.5 must be added as an optional feature <br> • hMailServer was built for older .NET versions, so it requires legacy framework <br><br> **This is Normal:** Many older applications require legacy frameworks. This is common in IT environments. |
